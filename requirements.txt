@@ -1,1 +1,1 @@
-cf-lint
+cfn-lint
