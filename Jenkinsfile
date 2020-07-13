@@ -15,7 +15,7 @@ pipeline {
       stage ('Python Requirements') {
           steps {
               echo "Installing the python requirements"
-              sh 'apt-get install pip3'
+              
               sh 'python3 -m pip3 install -r requirements.txt'
           }
       }
@@ -24,7 +24,7 @@ pipeline {
               echo "Gonna generate some data" 
               sh 'echo 51*10 | bc'
               echo "Data done\n"
-              echo "$Component_Name $Environment_Name $AWS_Region\n"
+              echo "$Fruit_Name\n"
               sh "jtest.sh $Fruit_Name"
           }
       }
