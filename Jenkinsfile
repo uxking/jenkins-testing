@@ -15,13 +15,13 @@ pipeline {
       stage ('Python Requirements') {
           steps {
               echo "Installing the requirements for generating Hash" 
-              sh 'python3 -m pip install -r requirements.txt'
+              sh 'python3 -m pip3 install -r requirements.txt'
           }
       }
-      stage ('Validate Script & Generate Obfuscated Hash') {
+      stage ('Produce a variable') {
           steps {
               echo "Gonna generate some data" 
-              sh 'ehco 51*10 | bc'
+              sh 'echo 51*10 | bc'
               echo "Data done\n"
               echo "$Component_Name $Environment_Name $AWS_Region\n"
               sh "jtest.sh $Fruit_Name"
