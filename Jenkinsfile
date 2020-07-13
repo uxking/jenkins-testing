@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'jenkins-worker1'        
+        label 'any'        
         }
 
     parameters {
