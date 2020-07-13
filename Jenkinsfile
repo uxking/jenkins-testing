@@ -16,7 +16,7 @@ pipeline {
           steps {
               echo "Installing the python requirements"
               
-              sh 'python3 -m pip3 install -r requirements.txt'
+              sh 'python3 -m pip install -r requirements.txt'
           }
       }
       stage ('Produce a variable') {
