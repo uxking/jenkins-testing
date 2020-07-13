@@ -1,6 +1,6 @@
 pipeline {
     agent any     
-        }
+        
 
     parameters {
      choice choices:['apple', 'bananas', 'peach'], description: 'Fruit Name. *** REQUIRED ***', name: 'Fruit_Name'
