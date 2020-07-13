@@ -15,7 +15,7 @@ pipeline {
       stage ('Python Requirements') {
           steps {
               echo "Installing the python requirements"
-              sh 'yum install pip3'
+              sh 'apt-get install pip3'
               sh 'python3 -m pip3 install -r requirements.txt'
           }
       }
