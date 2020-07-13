@@ -14,7 +14,8 @@ pipeline {
   stages {
       stage ('Python Requirements') {
           steps {
-              echo "Installing the requirements for generating Hash" 
+              echo "Installing the python requirements"
+              sh 'yum install pip3'
               sh 'python3 -m pip3 install -r requirements.txt'
           }
       }
