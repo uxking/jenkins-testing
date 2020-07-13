@@ -22,10 +22,10 @@ pipeline {
       stage ('Produce a variable') {
           steps {
               echo "Gonna generate some data" 
-              sh 'echo 51*10 | bc'
+              sh "echo 51*10 | bc"
               echo "Data done\n"
               echo "$Fruit_Name\n"
-              sh "jtest.sh $Fruit_Name"
+              sh "./jtest.sh $Fruit_Name"
           }
       }
   }   
