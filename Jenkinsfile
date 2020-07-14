@@ -30,6 +30,7 @@ pipeline {
     stage ('Use variable created above') {
       steps {
         echo "using the variable from above: ${env.FINAL_FRUIT} value\n"
+        sh 'ansible-playbook -i localhost jtest.playbook.yml'
       }
     }
   }
