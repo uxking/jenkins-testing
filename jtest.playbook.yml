@@ -6,5 +6,5 @@
     tasks:
     - name: Ansible variable usage
       debug:
-        msg: "Sytem {{ inventory_hostname }} has profile {{ fruit_profile }} and frutname of {{ fruit_name }}"
+        msg: "System {{ inventory_hostname }} has profile {{ fruit_profile }} and friutname of {{ fruit_name }}"
 
