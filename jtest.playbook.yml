@@ -2,6 +2,6 @@
   - hosts: all
     tasks:
     - name: Ansible variable usage
-      debug: 
-        msg: "{{ fruit_profile }}"
+      debug:
+        msg: "Sytem {{ inventory_hostname }} has profile {{ fruit_profile }}"
 
