@@ -13,6 +13,7 @@ pipeline {
 
   stages {
       stage ('Python Requirements') {
+          when { equals expected: 1, actual: currentBuild.number }
           steps {
               echo "Installing the python requirements"
               
