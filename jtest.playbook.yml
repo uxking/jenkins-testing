@@ -1,5 +1,8 @@
 ---
-  - hosts: all
+  - name: Jenkins Playbook
+    hosts: localhost
+    connection: local
+
     tasks:
     - name: Ansible variable usage
       debug:
