@@ -28,7 +28,7 @@ pipeline {
     }
     stage ('Use variable created above') {
       steps {
-        echo "using the variable from above: env.FINAL value"
+        echo "using the variable from above: ${env.FINAL} value"
       }
     }
   }
