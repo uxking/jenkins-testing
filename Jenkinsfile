@@ -24,7 +24,7 @@ pipeline {
         echo "Data done\n"
         echo "$Fruit_Name\n"
         script {
-          env.FINAL_FRUIT = sh(script: "./jtest.sh $Fruit_Name", returnStdout: true)
+          env.FINAL_FRUIT = sh(script: "./jtest.py $Fruit_Name", returnStdout: true)
         }
       }
     }
