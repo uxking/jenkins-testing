@@ -23,12 +23,14 @@ pipeline {
         sh "echo 51*10 | bc"
         echo "Data done\n"
         echo "$Fruit_Name\n"
-        sh "./jtest.sh $Fruit_Name"
+        script {
+          env.FINAL_FRUIT = sh(script: "./jtest.sh $Fruit_Name", returnStdout: true)
+        }
       }
     }
     stage ('Use variable created above') {
       steps {
-        echo "using the variable from above: ${env.FINAL} value"
+        echo "using the variable from above: ${env.FINAL_FRUIT} value"
       }
     }
   }
