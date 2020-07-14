@@ -19,10 +19,9 @@ pipeline {
     }
     stage ('Produce a variable') {
       steps {
-        echo "Gonna generate some data" 
-        sh "echo 51*10 | bc"
-        echo "Data done\n"
+        echo "The following parameter was passed in\n"
         echo "$Fruit_Name\n"
+        echo "Setting an env variable called FINAL_FRUIT to be used in the next stage\n"
         script {
           env.FINAL_FRUIT = sh(script: "python3 ./jtest.py $Fruit_Name", returnStdout: true)
         }
@@ -30,7 +29,7 @@ pipeline {
     }
     stage ('Use variable created above') {
       steps {
-        echo "using the variable from above: ${env.FINAL_FRUIT} value"
+        echo "using the variable from above: ${env.FINAL_FRUIT} value\n"
       }
     }
   }
